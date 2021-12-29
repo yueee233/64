@@ -101,11 +101,61 @@
         }
 			</style>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-		<script type="text/javascript">
+<script type="text/javascript">
       $(function(){
-    	  $("form").submit(function(){
-    		  alert("表单将要提交！");
-    	  });
+    	   $("#p11").click(function(){
+              var val=$('input:radio[name="sex"]:checked').val();
+              if(val == 0){
+              	alert("第一题答案错误！");
+                  return false;
+              }
+              else if(val == null){
+              	alert("第一题没有作答！");
+              	return false;
+              }
+              var val1=$('input:radio[name="s"]:checked').val();
+              if(val1 == 0){
+              	alert("第二题答案错误！");
+                  return false;
+              }
+              else if(val1 == null){
+              	alert("第二题没有作答！");
+              	return false;
+              }
+              
+              var val3=$('input:radio[name="s1"]:checked').val();
+              if(val3 == 0){
+              	alert("第三题答案错误！");
+                  return false;
+              }
+              else if(val3 == null){
+              	alert("第三题没有作答！");
+              	return false;
+              }
+              
+              var val4=$('input:radio[name="s2"]:checked').val();
+              if(val4 == 0){
+              	alert("第四题答案错误！");
+                  return false;
+              }
+              else if(val4 == null){
+              	alert("第四题没有作答！");
+              	return false;
+              }
+              
+              var val5=$('input:radio[name="s3"]:checked').val();
+              if(val5 == 0){
+              	alert("第五题答案错误！");
+                  return false;
+              }
+              else if(val5 == null){
+              	alert("第五题没有作答！");
+              	return false;
+              }
+              if(val==1 && val1==1 && val3==1 && val4==1 && val5==1){
+              	alert("回答正确！")
+              }
+          });
       })
     </script>
 			
@@ -123,34 +173,34 @@
 		<div id="p5"><a>5 、济公故居就是他曾经？的地方。   </a></div>
 		<form method="get" action=" https://yueee233.github.io/61/">
 		<div id="p6">
-          <input type="radio" name="sex" />  三十  
-          <input type="radio" name="sex" />  二十
-          <input type="radio" name="sex" />  十五
-          <input type="radio" name="sex" />  十三
+          <input type="radio" name="sex" value="1"/>  三十  
+          <input type="radio" name="sex" value="0"/>  二十
+          <input type="radio" name="sex" value="0"/>  十五
+          <input type="radio" name="sex" value="0"/>  十三
         </div>
         <div id="p7">
-          <input type="radio" name="s" />  奇景
-          <input type="radio" name="s" />  奇观
-          <input type="radio" name="s" />  奇瀑
-          <input type="radio" name="s" />  奇水
+          <input type="radio" name="s" value="0"/>  奇景
+          <input type="radio" name="s" value="1"/>  奇观
+          <input type="radio" name="s" value="0"/>  奇瀑
+          <input type="radio" name="s" value="0"/>  奇水
         </div>
         <div id="p8">
-          <input type="radio" name="s1" />    西湖林隐
-          <input type="radio" name="s1" />    姑苏寒山
-          <input type="radio" name="s1" />    当阳玉泉
-          <input type="radio" name="s1" />    南普陀寺
+          <input type="radio" name="s1" value="0"/>    西湖林隐
+          <input type="radio" name="s1" value="0"/>    姑苏寒山
+          <input type="radio" name="s1" value="1"/>    当阳玉泉
+          <input type="radio" name="s1" value="0"/>    南普陀寺
         </div>
         <div id="p9">
-          <input type="radio" name="s2" />    白
-          <input type="radio" name="s2" />    毛
-          <input type="radio" name="s2" />    小
-          <input type="radio" name="s2" />    青
+          <input type="radio" name="s2" value="0"/>    白
+          <input type="radio" name="s2" value="0"/>    毛
+          <input type="radio" name="s2" value="0"/>    小
+          <input type="radio" name="s2" value="1"/>    青
         </div>
         <div id="p10">
-          <input type="radio" name="s3" />    居住
-          <input type="radio" name="s3" />    出生
-          <input type="radio" name="s3" />    出家
-          <input type="radio" name="s3" />    养老
+          <input type="radio" name="s3" value="0"/>    居住
+          <input type="radio" name="s3" value="0"/>    出生
+          <input type="radio" name="s3" value="1"/>    出家
+          <input type="radio" name="s3" value="0"/>    养老
         </div>
         <div id="p11"><input type="submit" value="提交" /></div>
         
